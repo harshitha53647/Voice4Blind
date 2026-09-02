@@ -598,19 +598,6 @@ Accessibility
     🌸 VOICE4BLIND
 ```
 
----
-
-# 👥 Team
-
-### Voice4Blind Team
-
-* **Harshitha**
-* **Mrudula**
-* **Manasa**
-* **Aishwarya**
-
----
-
 # ❤️ Our Vision
 
 We believe that **access to education should not depend on vision**.
