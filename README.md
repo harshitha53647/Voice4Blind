@@ -2,7 +2,7 @@
 
 ### **Empowering Vision Through Voice**
 
-> **A fully voice-controlled AI web application designed to help blind and visually-impaired learners access, navigate, understand, and listen to digital learning content.**
+> **A voice-controlled AI web application designed to help blind and visually impaired learners access, navigate, understand, and listen to digital learning content.**
 
 **No clicking. No typing. No visual cues required. 🎙️♿**
 
@@ -10,84 +10,130 @@
 
 ## 🌟 About Voice4Blind
 
-**Voice4Blind** is an AI-powered accessibility platform created to make digital learning more independent and accessible for visually impaired users.
+**Voice4Blind** is an AI-powered accessibility platform designed to make digital learning more accessible and independent for visually impaired users.
 
-The application allows users to interact with documents completely through **voice commands**.
+The application combines **Speech-to-Text, Natural Language Processing, Intent Recognition, Document Processing, AI Summarization, and Text-to-Speech** to create a voice-first learning experience.
 
-Users can:
+Users can interact with the application using natural voice commands to:
 
-* 🎤 Control the application using their voice
-* 📄 Upload and open learning documents
+* 🎤 Navigate the application
+* 📄 Access learning documents
 * 📖 Read documents aloud
-* 🧭 Navigate through sections using voice
+* 🧭 Navigate between sections
 * 🤖 Summarize lengthy content
 * 💡 Get simplified explanations
 * 📌 Listen to important points
-* 🔊 Adjust reading speed and voice
-* 🌐 Switch between multiple Indian languages
-* 📊 Ask the system to describe visual elements such as graphs
+* 🔊 Control reading speed
+* 🌐 Switch languages
+* 📊 Request descriptions of visual content
 
 ---
 
 # 🎯 Problem Statement
 
-Visually impaired learners often face difficulties accessing digital educational content, especially lengthy documents, PDFs, notes, and other learning materials.
+Visually impaired learners often face challenges when accessing digital educational resources such as PDFs, notes, and lengthy documents.
 
-Traditional applications usually depend heavily on:
+Traditional applications rely heavily on:
 
-* Mouse clicks
+* Mouse interaction
 * Keyboard input
 * Visual buttons
-* Screen navigation
+* Screen-based navigation
 
-**Voice4Blind** addresses this challenge by providing a **voice-first learning experience** where users can perform important actions through natural voice commands.
+This can make independent learning difficult.
+
+### 💡 Our Solution
+
+**Voice4Blind** provides a voice-first interface where users can perform important actions through spoken commands.
+
+Instead of manually navigating a document, a learner can simply say:
+
+> 🎤 **"Read this document"**
+
+or
+
+> 🎤 **"Summarize this section"**
+
+The system understands the command and responds through speech.
 
 ---
 
 # 💡 Key Features
 
-### 🎙️ Fully Voice-Controlled
+## 🎙️ Voice-Based Interaction
 
-The application is designed around voice interaction.
+Users can control the application through natural voice commands without depending on traditional mouse or keyboard interaction.
 
-Users can navigate through the different screens and control document reading using spoken commands.
+---
 
-### 📚 Document Reading
+## 📖 Document Reading
 
-Users can open learning documents and listen to their content through text-to-speech.
+Users can open learning documents and listen to their contents through Text-to-Speech.
 
-### 🤖 AI Summarization
+---
 
-Long sections can be summarized using AI, helping users understand important information quickly.
+## 🤖 AI Summarization
 
-### 🧠 Simplified Explanation
+Long sections of educational content can be summarized to help users quickly understand the most important information.
 
-Users can ask:
+---
+
+## 🧠 Intent Recognition
+
+Voice commands are analyzed and classified using pattern matching and regular expressions.
+
+Examples include:
+
+```text
+READ
+PAUSE
+RESUME
+NEXT
+PREVIOUS
+REPEAT
+SUMMARIZE
+EXPLAIN
+IMPORTANT POINTS
+CHANGE LANGUAGE
+LOGOUT
+```
+
+---
+
+## 💡 Simplified Explanation
+
+Users can say:
 
 > **"Explain simply"**
 
-to receive an easier-to-understand explanation of the current content.
+to receive an easier explanation of the current content.
 
-### 📌 Important Points
+---
+
+## 📌 Important Points
 
 Users can say:
 
 > **"Important points"**
 
-to extract the key information from the current section.
+to hear the key information from the current section.
 
-### 🧭 Voice Navigation
+---
+
+## 🧭 Voice Navigation
 
 Users can navigate through documents using commands such as:
 
 * `"Next"`
 * `"Previous"`
+* `"Repeat"`
 * `"Open file 2"`
-* `"Go back"`
 
-### ⏯️ Reading Controls
+---
 
-Users can control speech using:
+## ⏯️ Reading Controls
+
+Users can control document reading using:
 
 * `"Read"`
 * `"Pause"`
@@ -95,25 +141,31 @@ Users can control speech using:
 * `"Repeat"`
 * `"Stop"`
 
-### 🔊 Voice Controls
+---
 
-Users can adjust the reading experience with:
+## 🔊 Voice Controls
+
+Users can modify the reading experience with commands such as:
 
 * `"Read slower"`
 * `"Read faster"`
 * `"Speak louder"`
 
-### 🌐 Multilingual Support
+---
 
-Voice4Blind is designed to support multiple Indian languages, making the application more accessible to a wider range of learners.
+## 🌐 Multilingual Support
 
-### 📊 Visual Description
+Voice4Blind supports multiple Indian languages through speech recognition and text-to-speech technologies.
 
-Users can ask:
+---
+
+## 📊 Visual Description
+
+Users can request descriptions of visual content such as graphs using voice commands.
+
+Example:
 
 > **"Describe the graph"**
-
-to receive a spoken description of a visual element.
 
 ---
 
@@ -124,7 +176,7 @@ voice4blind/
 │
 ├── frontend/
 │   ├── index.html
-│   │   └── Full multi-screen UI
+│   │   └── Multi-screen user interface
 │   │       ├── Welcome
 │   │       ├── Login
 │   │       ├── Dashboard
@@ -134,7 +186,7 @@ voice4blind/
 │   │   └── Dark purple/violet theme
 │   │
 │   └── app.js
-│       └── Complete voice pipeline
+│       └── Voice interaction pipeline
 │           ├── Speech-to-Text
 │           ├── Text-to-Speech
 │           └── Intent Detection
@@ -149,29 +201,174 @@ voice4blind/
 │   │   └── Uploaded documents
 │   │
 │   └── modules/
+│       ├── _init_.py
+│       ├── document_processor.py
+│       │   └── Text extraction, chunking,
+│       │       and summarization
+│       │
 │       ├── intent_classifier.py
-│       │   └── Pattern + Regex Intent Detection
+│       │   └── Pattern + Regex intent detection
 │       │
-│       ├── tts_engine.py
-│       │   └── gTTS / pyttsx3 / Azure Neural TTS
-│       │
-│       └── document_processor.py
-│           └── Text Extraction
-│           ├── Text Chunking
-│           └── Summarization
+│       └── tts_engine.py
+│           └── Text-to-Speech engines
 │
 ├── requirements.txt
-│
+├── start.sh
 └── README.md
+```
+
+---
+
+# 🧠 System Architecture
+
+```text
+                    🎤 USER VOICE
+                         │
+                         ▼
+                ┌─────────────────┐
+                │  Speech-to-Text │
+                │   Web Speech API│
+                └────────┬────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │ Language        │
+                │ Processing      │
+                └────────┬────────┘
+                         │
+                         ▼
+              ┌──────────────────────┐
+              │ Intent Recognition   │
+              │ Pattern + Regex      │
+              └──────────┬───────────┘
+                         │
+                         ▼
+              ┌──────────────────────┐
+              │ Action Handler       │
+              │ app.js / main.py     │
+              └──────────┬───────────┘
+                         │
+                         ▼
+              ┌──────────────────────┐
+              │ Document Processor   │
+              │ Extraction + Chunking│
+              └──────────┬───────────┘
+                         │
+                         ▼
+              ┌──────────────────────┐
+              │ AI Summarization     │
+              │      AI Model        │
+              └──────────┬───────────┘
+                         │
+                         ▼
+              ┌──────────────────────┐
+              │ Text-to-Speech       │
+              │ Browser / gTTS /     │
+              │ pyttsx3 / Azure      │
+              └──────────┬───────────┘
+                         │
+                         ▼
+                    🔊 VOICE OUTPUT
+                         │
+                         ▼
+                  🔄 LISTEN AGAIN
+```
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology          | Purpose                                         |
+| ------------------- | ----------------------------------------------- |
+| HTML5               | Frontend structure                              |
+| CSS3                | User interface and accessibility-focused design |
+| JavaScript          | Frontend logic and voice pipeline               |
+| Web Speech API      | Speech recognition and browser TTS              |
+| Python              | Backend development                             |
+| FastAPI             | REST API and WebSocket server                   |
+| NLP                 | Text and command processing                     |
+| Regular Expressions | Intent classification                           |
+| gTTS                | Text-to-Speech                                  |
+| pyttsx3             | Offline Text-to-Speech option                   |
+| Azure Neural TTS    | Advanced speech output                          |
+| Document Processing | Text extraction and chunking                    |
+| AI Summarization    | Summarizing educational content                 |
+
+---
+
+# 🔧 Backend Modules
+
+## `main.py`
+
+The main FastAPI backend responsible for communication between the frontend and backend.
+
+It handles:
+
+* REST API requests
+* WebSocket communication
+* Document processing requests
+* Backend application logic
+
+---
+
+## `intent_classifier.py`
+
+Responsible for identifying the user's intention from spoken commands.
+
+It uses:
+
+* Pattern matching
+* Regular expressions
+* Command classification
+
+Examples:
+
+```text
+"Read"
+"Next"
+"Previous"
+"Summarize"
+"Repeat"
+"Pause"
+"Resume"
+"Logout"
+```
+
+---
+
+## `document_processor.py`
+
+Responsible for processing uploaded learning documents.
+
+Its responsibilities include:
+
+* Text extraction
+* Text cleaning
+* Text chunking
+* Section processing
+* Summarization preparation
+
+---
+
+## `tts_engine.py`
+
+Provides Text-to-Speech functionality.
+
+Possible speech engines include:
+
+```text
+gTTS
+pyttsx3
+Azure Neural TTS
 ```
 
 ---
 
 # 🚀 Quick Start
 
-## Option 1 — Run Frontend Standalone
+## Option 1 — Frontend Only
 
-The frontend can be opened directly in a supported browser.
+The frontend can be opened directly using a supported browser.
 
 Open:
 
@@ -181,15 +378,11 @@ frontend/index.html
 
 using **Google Chrome** or **Microsoft Edge**.
 
-The browser's **Web Speech API** handles voice interaction.
-
-### 🎤 Important
-
-Allow **microphone access** when the browser asks for permission.
+Allow microphone access when prompted.
 
 ---
 
-# ⚙️ Option 2 — Run with Backend
+# ⚙️ Option 2 — Full Backend Setup
 
 ### 1. Clone the Repository
 
@@ -236,41 +429,11 @@ cd backend
 python main.py
 ```
 
-The FastAPI server runs at:
+The backend runs on:
 
 ```text
 http://localhost:8000
 ```
-
-The frontend can be accessed through:
-
-```text
-http://localhost:8000/frontend/index.html
-```
-
----
-
-# 🔐 Environment Variables
-
-Some advanced features can optionally use external AI and speech services.
-
-Create a `.env` file inside the `backend/` directory:
-
-```env
-OPENAI_API_KEY=your_api_key
-AZURE_SPEECH_KEY=your_key
-AZURE_SPEECH_REGION=eastus
-```
-
-### Used For
-
-| Variable              | Purpose                     |
-| --------------------- | --------------------------- |
-| `OPENAI_API_KEY`      | AI-powered summarization    |
-| `AZURE_SPEECH_KEY`    | Azure Neural Text-to-Speech |
-| `AZURE_SPEECH_REGION` | Azure Speech service region |
-
-> API keys should never be committed to GitHub. Add `.env` to `.gitignore`.
 
 ---
 
@@ -304,212 +467,60 @@ AZURE_SPEECH_REGION=eastus
 | Say                  | Action               |
 | -------------------- | -------------------- |
 | `"Scan documents"`   | List available files |
-| `"Open Maths Notes"` | Open a file by name  |
+| `"Open Maths Notes"` | Open file by name    |
 | `"Open file 2"`      | Open file by number  |
 | `"Logout"`           | Logout               |
 
 ---
 
-# 📖 Reader Commands
+## 📖 Reader
 
-| Say                    | Action                      |
-| ---------------------- | --------------------------- |
-| `"Read"`               | Begin reading               |
-| `"Start reading"`      | Begin reading               |
-| `"Stop"`               | Pause/stop reading          |
-| `"Pause"`              | Pause reading               |
-| `"Wait"`               | Pause reading               |
-| `"Resume"`             | Resume reading              |
-| `"Continue"`           | Resume reading              |
-| `"Repeat"`             | Repeat current section      |
-| `"Say again"`          | Repeat current section      |
-| `"Next"`               | Move to next section        |
-| `"Skip"`               | Move to next section        |
-| `"Previous"`           | Move to previous section    |
-| `"Back"`               | Move to previous section    |
-| `"Summarize"`          | Summarize current section   |
-| `"Explain simply"`     | Give simplified explanation |
-| `"Important points"`   | Read key points             |
-| `"Read slower"`        | Decrease reading speed      |
-| `"Read faster"`        | Increase reading speed      |
-| `"Speak louder"`       | Adjust voice output         |
-| `"Change to Kannada"`  | Switch to Kannada           |
-| `"Change to Hindi"`    | Switch to Hindi             |
-| `"Describe the graph"` | Describe visual content     |
-| `"Logout"`             | Exit and logout             |
+| Say                    | Action                    |
+| ---------------------- | ------------------------- |
+| `"Read"`               | Begin reading             |
+| `"Start reading"`      | Begin reading             |
+| `"Stop"`               | Stop reading              |
+| `"Pause"`              | Pause reading             |
+| `"Resume"`             | Resume reading            |
+| `"Continue"`           | Continue reading          |
+| `"Repeat"`             | Repeat current section    |
+| `"Say again"`          | Repeat current section    |
+| `"Next"`               | Next section              |
+| `"Previous"`           | Previous section          |
+| `"Summarize"`          | Summarize current section |
+| `"Explain simply"`     | Simplify current section  |
+| `"Important points"`   | Read key points           |
+| `"Read slower"`        | Decrease reading speed    |
+| `"Read faster"`        | Increase reading speed    |
+| `"Speak louder"`       | Adjust voice output       |
+| `"Change to Kannada"`  | Switch to Kannada         |
+| `"Change to Hindi"`    | Switch to Hindi           |
+| `"Describe the graph"` | Describe visual content   |
+| `"Logout"`             | Exit and logout           |
 
 ---
 
 # 🌐 Supported Languages
 
-Voice4Blind is designed with multilingual accessibility in mind.
-
-| Language       | STT Code | TTS Code |
-| -------------- | -------- | -------- |
-| 🇺🇸 English   | `en-US`  | `en-US`  |
-| 🇮🇳 Hindi     | `hi-IN`  | `hi-IN`  |
-| 🇮🇳 Kannada   | `kn-IN`  | `kn-IN`  |
-| 🇮🇳 Tamil     | `ta-IN`  | `ta-IN`  |
-| 🇮🇳 Telugu    | `te-IN`  | `te-IN`  |
-| 🇮🇳 Malayalam | `ml-IN`  | `ml-IN`  |
-| 🇮🇳 Marathi   | `mr-IN`  | `mr-IN`  |
-| 🇮🇳 Bengali   | `bn-IN`  | `bn-IN`  |
-| 🇮🇳 Gujarati  | `gu-IN`  | `gu-IN`  |
-| 🇮🇳 Punjabi   | `pa-IN`  | `pa-IN`  |
-| 🇮🇳 Urdu      | `ur-PK`  | `ur-PK`  |
-| 🇮🇳 Odia      | `or-IN`  | `or-IN`  |
-| 🇮🇳 Assamese  | `as-IN`  | `as-IN`  |
+| Language  | STT Code | TTS Code |
+| --------- | -------- | -------- |
+| English   | `en-US`  | `en-US`  |
+| Hindi     | `hi-IN`  | `hi-IN`  |
+| Kannada   | `kn-IN`  | `kn-IN`  |
+| Tamil     | `ta-IN`  | `ta-IN`  |
+| Telugu    | `te-IN`  | `te-IN`  |
+| Malayalam | `ml-IN`  | `ml-IN`  |
+| Marathi   | `mr-IN`  | `mr-IN`  |
+| Bengali   | `bn-IN`  | `bn-IN`  |
+| Gujarati  | `gu-IN`  | `gu-IN`  |
+| Punjabi   | `pa-IN`  | `pa-IN`  |
+| Urdu      | `ur-PK`  | `ur-PK`  |
+| Odia      | `or-IN`  | `or-IN`  |
+| Assamese  | `as-IN`  | `as-IN`  |
 
 ---
 
-# 🧠 System Architecture
-
-```text
-                    🎤 USER VOICE
-                         │
-                         ▼
-                ┌─────────────────┐
-                │  Speech-to-Text │
-                │   Web Speech API│
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │ Language        │
-                │ Detection       │
-                └────────┬────────┘
-                         │
-                         ▼
-              ┌──────────────────────┐
-              │ Intent Recognition   │
-              │ Pattern + Regex      │
-              └──────────┬───────────┘
-                         │
-                         ▼
-              ┌──────────────────────┐
-              │ Action Handler       │
-              │ app.js / main.py     │
-              └──────────┬───────────┘
-                         │
-                         ▼
-              ┌──────────────────────┐
-              │ Document Processor   │
-              │ Extraction + Chunking│
-              └──────────┬───────────┘
-                         │
-                         ▼
-              ┌──────────────────────┐
-              │ AI Summarization     │
-              │ GPT-4o-mini          │
-              └──────────┬───────────┘
-                         │
-                         ▼
-              ┌──────────────────────┐
-              │ Text-to-Speech       │
-              │ SpeechSynthesis      │
-              │ gTTS / Azure TTS     │
-              └──────────┬───────────┘
-                         │
-                         ▼
-                    🔊 VOICE OUTPUT
-                         │
-                         ▼
-                  🔄 LISTEN AGAIN
-```
-
----
-
-# 🔧 Core Backend Modules
-
-## `main.py`
-
-The main **FastAPI server** responsible for communication between the frontend and backend.
-
-It provides:
-
-* REST API endpoints
-* WebSocket communication
-* Document handling
-* Backend request processing
-
----
-
-## `intent_classifier.py`
-
-Responsible for understanding user commands.
-
-It uses **pattern matching and regular expressions** to identify intents such as:
-
-```text
-READ
-PAUSE
-RESUME
-NEXT
-PREVIOUS
-REPEAT
-SUMMARIZE
-EXPLAIN
-IMPORTANT_POINTS
-CHANGE_LANGUAGE
-LOGOUT
-```
-
----
-
-## `tts_engine.py`
-
-Handles text-to-speech generation.
-
-Supported engines include:
-
-```text
-gTTS
-pyttsx3
-Azure Neural TTS
-```
-
-This allows textual responses to be converted into spoken output.
-
----
-
-## `document_processor.py`
-
-Responsible for processing uploaded documents.
-
-Main functions include:
-
-* 📄 Text extraction
-* ✂️ Text chunking
-* 📚 Section processing
-* 🤖 Summarization
-* 📖 Content preparation for reading
-
----
-
-# 🔊 Text-to-Speech Pipeline
-
-Voice4Blind can use different speech engines depending on the deployment environment.
-
-```text
-Text
- │
- ├── Browser SpeechSynthesis
- │
- ├── gTTS
- │
- ├── pyttsx3
- │
- └── Azure Neural TTS
-        │
-        ▼
-    🔊 Spoken Output
-```
-
----
-
-# 🔐 Demo Login Credentials
-
-For demonstration purposes:
+# 🔐 Demo Credentials
 
 | Username | Password   |
 | -------- | ---------- |
@@ -517,7 +528,7 @@ For demonstration purposes:
 | `demo`   | `demo`     |
 | `user`   | `password` |
 
-> These are demo credentials only and should not be used for production authentication.
+> These credentials are for demonstration purposes only.
 
 ---
 
@@ -532,67 +543,44 @@ For demonstration purposes:
 
 ### ⭐ Recommended
 
-**Google Chrome on desktop** provides the best experience for browser-based speech recognition.
+**Google Chrome on desktop** is recommended for the best browser-based speech recognition experience.
 
 ---
 
-# ♿ Accessibility Design
+# ♿ Accessibility
 
-Accessibility is the core principle of Voice4Blind.
+Accessibility is the primary goal of Voice4Blind.
 
-The application is designed to minimize dependence on:
+The application aims to reduce dependency on:
 
 * 🖱️ Mouse interaction
 * ⌨️ Keyboard input
 * 👀 Visual navigation
 * 🔘 Manual button selection
 
-Instead, users can interact with the system using natural voice commands.
+Instead, users can interact with learning content using voice commands.
 
 ---
 
 # 🔮 Future Enhancements
 
-### 🤖 AI Improvements
-
-* More advanced conversational AI
-* Context-aware document questions
-* Improved summarization
-* Personalized learning assistance
-
-### 🌐 Language Improvements
-
-* Better multilingual speech recognition
-* More Indian language support
-* Improved regional pronunciation
-* Language-aware summarization
-
-### 📚 Document Improvements
-
-* More document formats
-* Automatic chapter detection
-* Tables and image understanding
-* Advanced graph and chart description
-
-### 📱 Platform Improvements
-
-* Android/iOS application
-* Offline voice processing
-* Cloud document storage
-* User profiles and personalized libraries
-
-### 🧑‍🦯 Accessibility Improvements
-
-* Braille-device integration
-* Assistive hardware integration
-* Smart wearable support
-* Improved screen-reader compatibility
+* 🌍 Improved multilingual support
+* 🤖 Advanced conversational AI
+* 📚 Question answering over documents
+* 📊 Improved graph and image understanding
+* 📱 Android and iOS applications
+* ☁️ Cloud document storage
+* 🎧 Offline voice processing
+* 📖 Automatic chapter detection
+* 🧑‍🦯 Assistive device integration
+* ⠿ Braille device integration
+* 👤 Personalized user profiles
 
 ---
 
 # 🏆 Hackathon Project
 
-**Voice4Blind** was developed as an accessibility-focused AI project for a hackathon, combining:
+Voice4Blind combines:
 
 ```text
 Artificial Intelligence
@@ -607,10 +595,19 @@ Document Processing
         +
 Accessibility
         ↓
-    VOICE4BLIND
+    🌸 VOICE4BLIND
 ```
 
-#
+---
+
+# 👥 Team
+
+### Voice4Blind Team
+
+* **Harshitha**
+* **Mrudula**
+* **Manasa**
+* **Aishwarya**
 
 ---
 
@@ -618,7 +615,7 @@ Accessibility
 
 We believe that **access to education should not depend on vision**.
 
-Voice4Blind aims to use AI and voice technology to give visually impaired learners a more independent way to access and understand digital educational content.
+Voice4Blind aims to use AI and voice technology to provide visually impaired learners with a more independent and accessible way to learn.
 
 > ### 🎙️ **"Empowering Vision Through Voice."**
 
